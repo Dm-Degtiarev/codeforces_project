@@ -43,6 +43,7 @@ def bot_worker():
 
 
 if __name__ == "__main__":
+    problem_parser_job()
     schedule.every().hour.do(problem_parser_job)
 
     bot_thread = threading.Thread(target=bot_worker)
